@@ -1,0 +1,60 @@
+
+<html>
+<head>
+	<title>leftmostvowel</title>
+</head>
+
+	<center>
+	<input type="text" id="str" placeholder="string or num">
+	<input type="button" onclick="evalinput();" value="submit">
+	<style>
+	
+	div{
+    border-style: solid;
+}
+
+body{
+    background-color: wheat;
+}
+	</style>
+	<h2>Result</h2>
+	
+	<body>
+	<div id="result"></div>
+	
+	
+	<script>
+		function evalinput(){
+			var str=document.getElementById("str").value;
+			if (Number.isInteger(parseInt(str))){
+				var num=parseInt(str);
+				var rev=0,rem=0;
+				while(num>0){
+					rem=parseInt(num%10);
+					rev=rev*10+rem;
+					num=parseInt(num/10);
+				}
+				result.innerHTML="<p>Reverse of:<strong>"+str+" </strong>is: <strong>"+rev+"</strong></p>";
+			}
+			else{
+				var text="<p>The entered string:<strong>"+str+"</strong></p>";
+				for(var i=0;i<str.length;i++)
+				{
+					if(str.charAt(i)=='a'||str.charAt(i)=='e'||str.charAt(i)=='i'||str.charAt(i)=='o'||str.charAt(i)=='u'||str.charAt(i)=='A'||str.charAt(i)=='E'||str.charAt(i)=='I'||str.charAt(i)=='O'||str.charAt(i)=='U') {
+						text+="<p>Leftmost vowel is :<strong>"+str.charAt(i)+"</strong></p>";
+						var pos=i+1;
+						text+="<p>Position of leftmost vowel:<strong> "+str.charAt(i)+"</strong> is <strong>"+pos+"</strong></p>"
+						result.innerHTML=text;
+						exit;
+					}
+				}
+				text+="<p>entered text has no vowel</p>";
+				result.innerHTML=text;
+			}
+		}
+	</script>
+</body>
+</center>
+
+</html>
+
