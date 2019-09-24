@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,12 +83,12 @@
 			z-index: 2;
 		}
 		#banner h2 {
-			position: absolute;;
-			top:k30px;
+			position: absolute;
+			top:30px;
 			margin: 0;
 			width: 100%;
 			text-align: center;
-			color: #fff;
+			color: slategray;
 		}
 		nav {
 			background:#85A8BB;
@@ -106,6 +107,18 @@
 		}
 		li {
 		display:inline;
+		}
+		section,aside {
+			float:left;
+			width:45%;
+			margin:1%;
+			background-color:snow;
+			padding:1%;
+		}
+		.col:after {
+			content:"";
+			clear:both;
+			display:block;
 		}
 	</style>
 </head>
@@ -142,11 +155,18 @@
 	<div class="content">
 		<h2>Content</h2>
 		<p>Tej (from Amharic ጠጀ, pronounced [ˈtʼədʒ]) is a mead or honey wine that is brewed and consumed in Ethiopia and Eritrea. It is flavoured with the powdered leaves and twigs of gesho (Rhamnus prinoides), a hops-like bittering agent that is a species of buckthorn.[1] It is called myes (ሜሰ) in Tigrinya, and daadhi in Omoro. Berz is a sweeter, less-alcoholic version of tej, and is aged for a shorter time.
-	</p></div>	
+	</p></div>
+	<div class="col">
+	<section><h2>col 1</h2>
+	<p>It mead or honey wine that is brewed and consumed in Ethiopia and Eritrea.Tej is usually homemade, but throughout Ethiopia it is available in bars called "tej houses". The traditional vessel for drinking tej is a rounded vase-shaped container called a berele, which looks like a Florence flask.[citation needed] Tej has a deceptively sweet taste that masks its high alcohol content, which varies greatly according to the length of fermentation.The traditional vessel for drinking tej is a rounded vase-shaped container called a berele.</p>
+	</section>
+	<aside><h2>col 2</h2>
+	<p>honey wine that is brewed and consumed in Ethiopia and Eritrea.</p>
+	<img src="p1.jpeg" width="100%">
+	</aside>
+	</div>	
 </body>
 </html>
-
-
 
 
 
